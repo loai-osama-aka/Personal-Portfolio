@@ -8,6 +8,7 @@ const body = document.body;
 const colorButtons = document.querySelectorAll(".theme-color");
 const resetBtn = document.getElementById("reset-settings");
 
+
 themeToggle.addEventListener("click", () => {
     html.classList.toggle("dark")
 })
@@ -118,6 +119,7 @@ resetBtn.addEventListener("click", () => {
 
 const navLinks = document.querySelectorAll(".nav-links a");
 const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute("href")));
+console.log(sections)
 
 document.addEventListener("scroll", () => {
     let currentSectionId = "";
