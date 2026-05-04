@@ -267,17 +267,340 @@ for (const dot of indicators) {
 window.addEventListener("resize", updateCarousel);
 
 const menuBtn = document.getElementById("mobile-menu-btn");
-const closeBtnMobile = document.getElementById("close-menu");
-const nav = document.getElementById("mobile-nav-links");
+const nav = document.querySelector(".nav-links");
 
-menuBtn.onclick = () => {
-  nav.classList.toggle("translate-x-full");
-};
-
-
-// close when clicking any link
-document.querySelectorAll("#mobile-nav-links a").forEach((link) => {
-  link.onclick = () => {
-    nav.classList.add("translate-x-full");
-  };
+menuBtn.addEventListener("click", () => {
+  nav.classList.toggle("open");
 });
+
+//language switcher
+const translations = {
+  ar: {
+    home: "الرئيسية",
+    about: "عني",
+    portfolio: "الأعمال",
+    experience: "الخبرة",
+    testimonials: "التوصيات",
+    contact: "تواصل",
+    loai: "لؤي اسامة",
+    freelance: "متاح للشغل الحر",
+    greeting: "مرحباً، أنا 👋",
+    frontenddeveloper: "مطور واجهات",
+    changeyourideas: "بحول أفكارك لـ",
+    specialideas: "تجارب رقمية مميزة",
+    description: ". متخصص في بناء مواقع وتطبيقات ويب حديثة بأحدث التقنيات",
+    exploreWork: "استكشف أعمالي",
+    contactMe: "تواصل معي",
+    discoverMore: "اكتشف المزيد",
+    aboutLabel: "من أنا",
+    aboutTitle: "عن",
+    name: "لؤي اسامة",
+
+    aboutHeading: {
+      text: `بحب أحول الأفكار <span class="text-primary">لواقع رقمي</span>`,
+      html: true,
+    },
+
+    aboutDesc1:
+      "مطور واجهات أمامية لدي الخبرة في بناء تطبيقات ويب حديثة وتصميم تجارب مستخدم استثنائية.",
+
+    aboutDesc2:
+      "بشتغل بأحدث التقنيات زي React و Next.js و TypeScript عشان أقدم حلول عالية الجودة وتعدي التوقعات.",
+    aiFaculty: "كلية ذكاء اصطناعي",
+    projectsCount: "+10 مشروع",
+    teamwork: "القدرة على العمل ضمن فريق",
+
+    whatIDo: "ما أقدمه",
+
+    service1: "تطوير تطبيقات ويب متكاملة بـ React & Next.js",
+    service2: "تصميم واجهات مستخدم حديثة وجذابة",
+    service3: "تحسين الأداء وسرعة التحميل",
+    service4: "تطوير مواقع متوافقة مع جميع الأجهزة",
+    projects: "مشروع",
+    years: "سنوات",
+    clients: "عميل",
+    skillsLabel: "ما أتقنه",
+    skillsTitle: "المهارات و",
+    skillsSpan: "التقنيات",
+
+    reactDesc: "خبرة متقدمة في بناء تطبيقات React معقدة",
+    nextDesc: "تطوير تطبيقات SSR وSSG متقدمة",
+    tsDesc: "كتابة كود آمن ومنظم بشكل احترافي",
+    tailwindDesc: "تصميم واجهات حديثة بسرعة عالية",
+    bootstrapDesc: "بناء واجهات ويب متجاوبة",
+    portfolioLabel: "أعمالي",
+    portfolioTitle: "معرض",
+    portfolioSpan: "المشاريع",
+
+    filterAll: "الكل",
+    filterWeb: "مواقع الويب",
+    filterApp: "التطبيقات",
+    filterDesign: "التصميم",
+    filterEcommerce: "التجارة الإلكترونية",
+    projectTypeApp: "تطبيق",
+    project1Title: "موقع التجارة الإلكترونية",
+    project1Desc: "موقع تجارة إلكترونية يتيح تصفح المنتجات والشراء والدفع.",
+    projectTypeWeb: "موقع ويب",
+    project2Title: "موقع عدسة للتصوير",
+    project2Desc: "موقع عرض احترافي للتصوير والعدسات بتصميم عصري ومتجاوب.",
+    project3Title: "تطبيق تواصل اجتماعي",
+    project3Desc:
+      "تطبيق تواصل اجتماعي يتيح إنشاء المنشورات والتفاعل مع المستخدمين.",
+
+    project4Title: "Contact Hub",
+    project4Desc: "نظام إدارة جهات الاتصال مع CRUD UI بسيط وسريع.",
+    project5Title: "تطبيق الطقس",
+    project5Desc:
+      "تطبيق طقس حديث يعرض بيانات الطقس في الوقت الحقيقي بتصميم متجاوب.",
+
+    project6Title: "ما هو للغداء؟",
+    project6Desc:
+      "تطبيق يقترح وصفات طعام ويُساعد في التخطيط للوجبات مع واجهة سهلة الاستخدام",
+    startYourProject: "لنبدأ مشروعك القادم",
+    expLabel: "مسيرتي المهنية",
+    expTitle: "الخبرة",
+    expSpan: "العملية",
+
+    exp1Date: "2025 - الآن",
+    exp1Title: "مطور واجهات",
+    exp1Company: "عمل حر / مشاريع شخصية",
+    exp1Desc:
+      "تطوير تطبيقات ويب حديثة باستخدام React و Next.js مع التركيز على الأداء وتجربة المستخدم.",
+
+    exp2Date: "2023 - 2024",
+    exp2Title: "تدريب Frontend",
+    exp2Company: "Route Academy",
+    exp2Desc:
+      "دراسة أساسيات البرمجة وتطوير الويب باستخدام HTML, CSS, JavaScript و React.",
+
+    exp3Date: "2020 - 2024",
+    exp3Title: "بكالوريوس ذكاء اصطناعي",
+    exp3Company: "جامعة كفر الشيخ",
+    exp3Desc:
+      "دراسة علوم الحاسب والذكاء الاصطناعي مع التركيز على البرمجة والخوارزميات.",
+
+    skillsCardTitle: "المهارات التقنية",
+    skillsCardDesc:
+      "React • Next.js • JavaScript • Tailwind • APIs • Redux • Git",
+
+    projectsCardTitle: "المشاريع",
+    projectsCardDesc: "منصات E-commerce • تطبيقات Social Media • أدوات داشبورد",
+
+    goalTitle: "هدفي",
+    goalDesc:
+      "الانضمام لفريق تطوير احترافي وبناء تطبيقات ويب قوية وقابلة للتوسع",
+    myrealexp: "خبرتي العملية",
+    testimonialsWord: "تأثير",
+    testimonialsSpan: "المشاريع",
+    ctaTitle: "جاهز تبدأ مشروعك؟",
+    ctaDesc: "يلا نشتغل سوا عشان نحول أفكارك لواقع مبهر",
+    ctaBtnContact: "تواصل معي الآن",
+    ctaBtnWork: "شاهد المزيد من الأعمال",
+    footerName: "لؤي اسامة",
+
+    footerDesc:
+      "أؤمن بأن البرمجة فن. هدفي مش بس كتابة كود، بل خلق تجربة مستخدم سلسة بتسيب أثر.",
+
+    footerCVLabel: "تعرف على خبراتي",
+    footerCVText: "حمل السيرة الذاتية (CV)",
+
+    footerStatusText: "أعمل حالياً على:",
+    footerStatusProject: "مشروع SaaS لإدارة الفريق",
+
+    footerLinksTitle: "روابط سريعة",
+
+    footerServicesTitle: "الخدمات",
+
+    service1: "تطوير الويب",
+    service2: "تطوير التطبيقات",
+    service3: "تصميم UI/UX",
+    service4: "الاستشارات التقنية",
+    service5: "تحسين الأداء",
+    service6: "الصيانة والدعم",
+
+    footerCopy: "© 2025 لؤي اسامة. جميع الحقوق محفوظة.",
+  },
+
+  en: {
+    home: "Home",
+    about: "About",
+    portfolio: "Projects",
+    experience: "Experience",
+    testimonials: "Testimonials",
+    contact: "Contact",
+    loai: "Loai Osama",
+    freelance: "Freelance Available",
+    greeting: "Hello, I'm 👋",
+    frontenddeveloper: "Frontend Developer",
+    changeyourideas: "Transforming your ideas into",
+    specialideas: "unique digital experiences",
+    description:
+      ". Specializing in building modern websites and web applications with the latest technologies",
+    exploreWork: "Explore My Work",
+    contactMe: "Contact Me",
+    discoverMore: "Discover More",
+    aboutLabel: "About Me",
+    aboutTitle: "About",
+    name: "Loai Osama",
+
+    aboutHeading: {
+      text: `I love turning ideas <span class="text-primary">into digital reality</span>`,
+      html: true,
+    },
+
+    aboutDesc1:
+      "Frontend developer experienced in building modern web applications and crafting exceptional user experiences.",
+
+    aboutDesc2:
+      "I work with the latest technologies like React, Next.js, and TypeScript to deliver high-quality solutions that exceed expectations.",
+    aiFaculty: "AI Faculty",
+    projectsCount: "+10 Projects",
+    teamwork: "Teamwork Ability",
+
+    whatIDo: "What I Offer",
+
+    service1: "Full web app development with React & Next.js",
+    service2: "Modern and attractive UI design",
+    service3: "Performance and loading speed optimization",
+    service4: "Responsive websites for all devices",
+    projects: "Projects",
+    years: "Years",
+    clients: "Clients",
+    skillsLabel: "What I Master",
+    skillsTitle: "Skills &",
+    skillsSpan: "Technologies",
+
+    reactDesc: "Advanced experience in building complex React applications",
+    nextDesc: "Building advanced SSR and SSG applications",
+    tsDesc: "Writing safe and well-structured code",
+    tailwindDesc: "Designing modern UIs with high speed",
+    bootstrapDesc: "Building responsive web interfaces",
+    portfolioLabel: "My Work",
+    portfolioTitle: "Project",
+    portfolioSpan: "Showcase",
+
+    filterAll: "All",
+    filterWeb: "Websites",
+    filterApp: "Applications",
+    filterDesign: "Design",
+    filterEcommerce: "E-commerce",
+    projectTypeApp: "App",
+    project1Title: "Ecommerce Website",
+    project1Desc:
+      "An e-commerce platform for browsing products, purchasing, and payments.",
+    projectTypeWeb: "Website",
+    project2Title: "Lens Photography Website",
+    project2Desc:
+      "A professional photography and lenses showcase website with modern responsive design.",
+    project3Title: "Social Media App",
+    project3Desc:
+      "A social media app for creating posts and interacting with users.",
+
+    project4Title: "Contact Hub",
+    project4Desc: "A simple and fast contact management system with CRUD UI.",
+    project5Title: "Weather App",
+    project5Desc:
+      "A modern weather app that shows real-time data with responsive design.",
+
+    project6Title: "What's for Dinner?",
+    project6Desc:
+      "An app that suggests recipes and helps plan meals with a simple UI.",
+    startYourProject: "let's Start Your Project",
+    expLabel: "My Journey",
+    expTitle: "Experience",
+    expSpan: "Timeline",
+
+    exp1Date: "2025 - Present",
+    exp1Title: "Frontend Developer",
+    exp1Company: "Freelance / Personal Projects",
+    exp1Desc:
+      "Building modern web applications using React and Next.js with focus on performance and UX.",
+
+    exp2Date: "2023 - 2024",
+    exp2Title: "Frontend Training",
+    exp2Company: "Route Academy",
+    exp2Desc:
+      "Studied web development fundamentals using HTML, CSS, JavaScript and React.",
+
+    exp3Date: "2020 - 2024",
+    exp3Title: "Bachelor of AI",
+    exp3Company: "Kafrelsheikh University",
+    exp3Desc:
+      "Studied computer science and AI with focus on programming and algorithms.",
+
+    skillsCardTitle: "Technical Skills",
+    skillsCardDesc:
+      "React • Next.js • JavaScript • Tailwind • APIs • Redux • Git",
+
+    projectsCardTitle: "Projects",
+    projectsCardDesc:
+      "E-commerce Platforms • Social Media Apps • Dashboard Tools",
+
+    goalTitle: "My Goal",
+    goalDesc:
+      "To join a professional development team and build scalable web applications",
+    myrealexp: "My Real Experience",
+    testimonialsWord: "Impact",
+    testimonialsSpan: "of Projects",
+    ctaTitle: "Ready to start your project?",
+    ctaDesc: "Let’s work together to turn your ideas into something amazing",
+    ctaBtnContact: "Contact Me Now",
+    ctaBtnWork: "View More Projects",
+    footerName: "Loai Osama",
+
+    footerDesc:
+      "I believe programming is an art. My goal is not just writing code, but creating smooth user experiences.",
+
+    footerCVLabel: "Learn about my experience",
+    footerCVText: "Download CV",
+
+    footerStatusText: "Currently working on:",
+    footerStatusProject: "SaaS team management project",
+
+    footerLinksTitle: "Quick Links",
+
+    footerServicesTitle: "Services",
+
+    service1: "Web Development",
+    service2: "App Development",
+    service3: "UI/UX Design",
+    service4: "Technical Consulting",
+    service5: "Performance Optimization",
+    service6: "Maintenance & Support",
+
+    footerCopy: "© 2025 Loai Osama. All rights reserved.",
+  },
+};
+let currentLang = localStorage.getItem("lang") || "ar";
+
+const toggleBtn = document.getElementById("lang-toggle");
+
+function setLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    const value = translations[lang][key];
+
+    if (!value) return;
+
+    //  Step 2 FIXED: safe HTML handling
+    if (typeof value === "object" && value.html) {
+      el.innerHTML = value.text;
+    } else {
+      el.textContent = value;
+    }
+  });
+
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+  localStorage.setItem("lang", lang);
+  toggleBtn.textContent = lang === "ar" ? "EN" : "العربية";
+}
+// toggle
+toggleBtn.addEventListener("click", () => {
+  currentLang = currentLang === "ar" ? "en" : "ar";
+  setLanguage(currentLang);
+});
+
+// init
+setLanguage(currentLang);

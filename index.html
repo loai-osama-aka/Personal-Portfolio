@@ -120,7 +120,7 @@
       class="fixed top-0 left-0 right-0 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none"
     >
       <div
-        class="container mx-auto px-4 md:px-8 py-5 flex justify-between items-center"
+        class="container m-0 mx-auto px-4 md:px-8 py-5 flex justify-between items-center"
       >
         <div class="flex items-center gap-3">
           <div
@@ -130,6 +130,7 @@
             <i class="fa-solid fa-code text-white text-xl"></i>
           </div>
           <div
+            data-i18n="loai"
             class="text-2xl font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent"
           >
             لؤي اسامة
@@ -141,26 +142,12 @@
         >
           <i class="fa-solid fa-bars"></i>
         </button>
-        
-        <div
-  id="mobile-nav-links"
-  class="fixed translate-x-full left-0 right-0 flex flex-col gap-6 p-8 z-[70]"
- 
-  role="menubar"
->
 
-  <!-- Links -->
-  <a href="#hero-section" class="mobile-link">الرئيسية</a>
-  <a href="#about" class="mobile-link">عني</a>
-  <a href="#portfolio" class="mobile-link">الأعمال</a>
-  <a href="#experience" class="mobile-link">الخبرة</a>
-  <a href="#testimonials" class="mobile-link">التوصيات</a>
-  <a href="#contact" class="mobile-link">تواصل</a>
-</div>
         <div class="nav-links flex gap-8 items-center" role="menubar">
           <a
             class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
             href="#hero-section"
+            data-i18n="home"
             role="menuitem"
             >الرئيسية</a
           >
@@ -168,30 +155,35 @@
             class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
             href="#about"
             role="menuitem"
+            data-i18n="about"
             >عني</a
           >
           <a
             class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
             href="#portfolio"
             role="menuitem"
+            data-i18n="portfolio"
             >الأعمال</a
           >
           <a
             class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
             href="#experience"
             role="menuitem"
+            data-i18n="experience"
             >الخبرة</a
           >
           <a
             class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
             href="#testimonials"
             role="menuitem"
+            data-i18n="testimonials"
             >التوصيات</a
           >
           <a
             class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
             href="#contact"
             role="menuitem"
+            data-i18n="contact"
             >تواصل</a
           >
           <!-- Theme Toggle Button -->
@@ -217,6 +209,9 @@
                 aria-hidden="true"
               ></i>
             </span>
+          </button>
+          <button id="lang-toggle" class="px-4 py-2 border rounded-lg text-sm">
+            EN
           </button>
         </div>
       </div>
@@ -271,6 +266,7 @@
                   ></span>
                 </span>
                 <span
+                  data-i18n="freelance"
                   class="text-sm font-semibold text-emerald-600 dark:text-emerald-400"
                   >متاح للشغل الحر</span
                 >
@@ -279,6 +275,7 @@
               <!-- Main Heading -->
               <div class="mb-8">
                 <p
+                  data-i18n="greeting"
                   class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-3 font-medium"
                 >
                   مرحباً، أنا 👋
@@ -289,6 +286,7 @@
                 >
                   <span class="relative inline-block">
                     <span
+                      data-i18n="loai"
                       class="bg-gradient-to-l pb-8 from-primary via-secondary to-accent bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient"
                     >
                       لؤي اسامة
@@ -306,7 +304,9 @@
                 >
                   <i class="fa-solid fa-code text-white text-sm"></i>
                 </div>
-                <span class="font-bold text-slate-800 dark:text-white"
+                <span
+                  class="font-bold text-slate-800 dark:text-white"
+                  data-i18n="frontend-developer"
                   >Frontend Developer</span
                 >
               </div>
@@ -315,9 +315,16 @@
               <p
                 class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 lg:mr-0 leading-relaxed"
               >
-                بحول أفكارك لـ
-                <span class="text-primary font-semibold">تجارب رقمية مميزة</span
-                >. متخصص في بناء مواقع وتطبيقات ويب حديثة بأحدث التقنيات.
+                <span data-i18n="changeyourideas">بحول أفكارك لـ</span>
+                <span
+                  data-i18n="specialideas"
+                  class="text-primary font-semibold"
+                  >تجارب رقمية مميزة</span
+                >
+                <span data-i18n="description"
+                  >. متخصص في بناء مواقع وتطبيقات ويب حديثة بأحدث
+                  التقنيات.</span
+                >
               </p>
 
               <!-- CTA Buttons -->
@@ -328,7 +335,9 @@
                   href="#portfolio"
                   class="group relative inline-flex items-center gap-3 bg-gradient-to-l from-primary to-secondary px-8 py-4 rounded-2xl text-lg font-bold text-white overflow-hidden transition-all duration-300 hover:-translate-y-1"
                 >
-                  <span class="relative z-10">استكشف أعمالي</span>
+                  <span data-i18n="exploreWork" class="relative z-10"
+                    >استكشف أعمالي</span
+                  >
                   <i
                     class="fa-solid fa-arrow-left relative z-10 transition-transform duration-300 group-hover:-translate-x-2"
                   ></i>
@@ -340,7 +349,7 @@
                   href="#contact"
                   class="group inline-flex items-center gap-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 hover:border-primary hover:text-primary hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <span>تواصل معي</span>
+                  <span data-i18n="contactMe">تواصل معي</span>
                   <i
                     class="fa-solid fa-paper-plane transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
                   ></i>
@@ -499,6 +508,7 @@
             aria-label="انتقل إلى قسم عني"
           >
             <span
+              data-i18n="discoverMore"
               class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary"
               >اكتشف المزيد</span
             >
@@ -529,12 +539,15 @@
         <div class="container mx-auto max-w-7xl relative z-10">
           <!-- Section Header -->
           <div class="text-center mb-16">
-            <span class="text-primary text-lg font-medium mb-3 block"
+            <span
+              data-i18n="aboutLabel"
+              class="text-primary text-lg font-medium mb-3 block"
               >من أنا</span
             >
             <h2 class="text-5xl font-black mb-4">
-              عن
+              <span data-i18n="aboutTitle">عن</span>
               <span
+                data-i18n="name"
                 class="bg-gradient-to-l from-primary to-secondary bg-clip-text text-transparent"
                 >لؤي اسامة</span
               >
@@ -559,18 +572,21 @@
 
                 <div class="relative z-10">
                   <h3
+                    data-i18n="aboutHeading"
                     class="text-3xl font-black mb-6 text-slate-800 dark:text-white"
                   >
                     بحب أحول الأفكار
                     <span class="text-primary">لواقع رقمي</span>
                   </h3>
                   <p
+                    data-i18n="aboutDesc1"
                     class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-4"
                   >
                     مطور واجهات أمامية لدي الخبرة في بناء تطبيقات ويب حديثة
                     وتصميم تجارب مستخدم استثنائية.
                   </p>
                   <p
+                    data-i18n="aboutDesc2"
                     class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed"
                   >
                     بشتغل بأحدث التقنيات زي React و Next.js و TypeScript عشان
@@ -585,21 +601,27 @@
                   class="flex items-center gap-2 bg-gray-200 dark:bg-slate-800 px-4 py-2 rounded-full"
                 >
                   <i class="fa-solid fa-graduation-cap text-primary"></i>
-                  <span class="text-sm font-medium">كلية ذكاء اصطناعي</span>
+                  <span class="text-sm font-medium" data-i18n="aiFaculty"
+                    >كلية ذكاء اصطناعي</span
+                  >
                 </div>
+
                 <div
                   class="flex items-center gap-2 bg-gray-200 dark:bg-slate-800 px-4 py-2 rounded-full"
                 >
                   <i class="fa-solid fa-briefcase text-secondary"></i>
-                  <span class="text-sm font-medium">+10 مشروع</span>
+                  <span class="text-sm font-medium" data-i18n="projectsCount"
+                    >+10 مشروع</span
+                  >
                 </div>
+
                 <div
                   class="flex items-center gap-2 bg-gray-200 dark:bg-slate-800 px-4 py-2 rounded-full"
                 >
                   <i class="fa-solid fa-users text-accent"></i>
-                  <span class="text-sm font-medium"
-                    >القدرة على العمل ضمن فريق</span
-                  >
+                  <span class="text-sm font-medium" data-i18n="teamwork">
+                    القدرة على العمل ضمن فريق
+                  </span>
                 </div>
               </div>
 
@@ -608,33 +630,45 @@
                 class="bg-slate-50 dark:bg-slate-800/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 dark:border-slate-700"
               >
                 <h4 class="font-bold text-lg mb-4 flex items-center gap-2">
-                  ما أقدمه
+                  <span data-i18n="whatIDo">ما أقدمه</span>
                   <i class="fa-solid fa-rocket text-primary"></i>
                 </h4>
+
                 <div class="space-y-3">
                   <div
                     class="flex items-center gap-3 text-slate-600 dark:text-slate-300"
                   >
                     <span class="w-2 h-2 bg-primary rounded-full"></span>
-                    <span>تطوير تطبيقات ويب متكاملة بـ React & Next.js</span>
+                    <span data-i18n="service1">
+                      تطوير تطبيقات ويب متكاملة بـ React & Next.js
+                    </span>
                   </div>
+
                   <div
                     class="flex items-center gap-3 text-slate-600 dark:text-slate-300"
                   >
                     <span class="w-2 h-2 bg-secondary rounded-full"></span>
-                    <span>تصميم واجهات مستخدم حديثة وجذابة</span>
+                    <span data-i18n="service2">
+                      تصميم واجهات مستخدم حديثة وجذابة
+                    </span>
                   </div>
+
                   <div
                     class="flex items-center gap-3 text-slate-600 dark:text-slate-300"
                   >
                     <span class="w-2 h-2 bg-accent rounded-full"></span>
-                    <span>تحسين الأداء وسرعة التحميل</span>
+                    <span data-i18n="service3">
+                      تحسين الأداء وسرعة التحميل
+                    </span>
                   </div>
+
                   <div
                     class="flex items-center gap-3 text-slate-600 dark:text-slate-300"
                   >
                     <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
-                    <span>تطوير مواقع متوافقة مع جميع الأجهزة</span>
+                    <span data-i18n="service4">
+                      تطوير مواقع متوافقة مع جميع الأجهزة
+                    </span>
                   </div>
                 </div>
               </div>
@@ -720,27 +754,41 @@
 
               <!-- Quick Stats Row -->
               <div class="grid grid-cols-3 gap-4">
+                <!-- Projects -->
                 <div
                   class="bg-slate-50 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-5 text-center border border-slate-200 dark:border-slate-700 hover:border-primary transition-all duration-300"
                 >
                   <div class="text-3xl font-black text-primary mb-1">10+</div>
-                  <div class="text-sm text-slate-600 dark:text-slate-400">
+                  <div
+                    class="text-sm text-slate-600 dark:text-slate-400"
+                    data-i18n="projects"
+                  >
                     مشروع
                   </div>
                 </div>
+
+                <!-- Years -->
                 <div
                   class="bg-slate-50 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-5 text-center border border-slate-200 dark:border-slate-700 hover:border-secondary transition-all duration-300"
                 >
                   <div class="text-3xl font-black text-secondary mb-1">1+</div>
-                  <div class="text-sm text-slate-600 dark:text-slate-400">
+                  <div
+                    class="text-sm text-slate-600 dark:text-slate-400"
+                    data-i18n="years"
+                  >
                     سنوات
                   </div>
                 </div>
+
+                <!-- Clients -->
                 <div
                   class="bg-slate-50 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-5 text-center border border-slate-200 dark:border-slate-700 hover:border-accent transition-all duration-300"
                 >
                   <div class="text-3xl font-black text-accent mb-1">3+</div>
-                  <div class="text-sm text-slate-600 dark:text-slate-400">
+                  <div
+                    class="text-sm text-slate-600 dark:text-slate-400"
+                    data-i18n="clients"
+                  >
                     عميل
                   </div>
                 </div>
@@ -805,16 +853,23 @@
         ></div>
         <div class="container mx-auto max-w-7xl relative z-10">
           <div class="text-center mb-16">
-            <span class="text-secondary text-lg font-medium mb-3 block"
-              >ما أتقنه</span
+            <span
+              class="text-secondary text-lg font-medium mb-3 block"
+              data-i18n="skillsLabel"
             >
-            <h2 id="skills-title" class="text-5xl font-black mb-4">
+              ما أتقنه
+            </span>
+
+            <h2 class="text-5xl font-black mb-4" data-i18n="skillsTitle">
               المهارات و
               <span
                 class="bg-linear-to-r from-secondary to-accent bg-clip-text text-transparent"
-                >التقنيات</span
+                data-i18n="skillsSpan"
               >
+                التقنيات
+              </span>
             </h2>
+
             <div
               class="w-24 h-1.5 bg-linear-to-r from-secondary to-accent mx-auto rounded-full"
             ></div>
@@ -844,7 +899,10 @@
                   style="width: 95%"
                 ></div>
               </div>
-              <p class="text-slate-500 dark:text-slate-400">
+              <p
+                class="text-slate-500 dark:text-slate-400"
+                data-i18n="reactDesc"
+              >
                 خبرة متقدمة في بناء تطبيقات React معقدة
               </p>
             </div>
@@ -872,7 +930,10 @@
                   style="width: 90%"
                 ></div>
               </div>
-              <p class="text-slate-500 dark:text-slate-400">
+              <p
+                class="text-slate-500 dark:text-slate-400"
+                data-i18n="nextDesc"
+              >
                 تطوير تطبيقات SSR وSSG متقدمة
               </p>
             </div>
@@ -900,7 +961,7 @@
                   style="width: 88%"
                 ></div>
               </div>
-              <p class="text-slate-500 dark:text-slate-400">
+              <p class="text-slate-500 dark:text-slate-400" data-i18n="tsDesc">
                 كتابة كود آمن ومنظم بشكل احترافي
               </p>
             </div>
@@ -928,7 +989,10 @@
                   style="width: 97%"
                 ></div>
               </div>
-              <p class="text-slate-500 dark:text-slate-400">
+              <p
+                class="text-slate-500 dark:text-slate-400"
+                data-i18n="tailwindDesc"
+              >
                 تصميم واجهات حديثة بسرعة عالية
               </p>
             </div>
@@ -956,7 +1020,10 @@
                   style="width: 95%"
                 ></div>
               </div>
-              <p class="text-slate-500 dark:text-slate-400">
+              <p
+                class="text-slate-500 dark:text-slate-400"
+                data-i18n="bootstrapDesc"
+              >
                 بناء واجهات ويب متجاوبة
               </p>
             </div>
@@ -1021,16 +1088,23 @@
         ></div>
         <div class="container mx-auto max-w-7xl relative z-10">
           <div class="text-center mb-16">
-            <span class="text-primary text-lg font-medium mb-3 block"
-              >أعمالي</span
+            <span
+              class="text-primary text-lg font-medium mb-3 block"
+              data-i18n="portfolioLabel"
             >
-            <h2 id="portfolio-title" class="text-5xl font-black mb-4">
+              أعمالي
+            </span>
+
+            <h2 class="text-5xl font-black mb-4" data-i18n="portfolioTitle">
               معرض
               <span
                 class="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent"
-                >المشاريع</span
+                data-i18n="portfolioSpan"
               >
+                المشاريع
+              </span>
             </h2>
+
             <div
               class="w-24 h-1.5 bg-linear-to-r from-primary to-secondary mx-auto rounded-full"
             ></div>
@@ -1039,46 +1113,48 @@
           <div
             class="flex justify-center gap-4 mb-12 flex-wrap"
             id="portfolio-filters"
-            role="group"
-            aria-label="فلترة المشاريع"
           >
             <button
               class="portfolio-filter active px-8 py-3 rounded-xl bg-linear-to-r from-primary to-secondary text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-primary/50"
               data-filter="all"
-              aria-pressed="true"
               type="button"
+              data-i18n="filterAll"
             >
               الكل
             </button>
+
             <button
               class="portfolio-filter px-8 py-3 rounded-xl bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700"
               data-filter="web"
-              aria-pressed="false"
               type="button"
+              data-i18n="filterWeb"
             >
               مواقع الويب
             </button>
+
             <button
               class="portfolio-filter px-8 py-3 rounded-xl bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700"
               data-filter="app"
-              aria-pressed="false"
               type="button"
+              data-i18n="filterApp"
             >
               التطبيقات
             </button>
+
             <button
               class="portfolio-filter px-8 py-3 rounded-xl bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700"
               data-filter="design"
-              aria-pressed="false"
               type="button"
+              data-i18n="filterDesign"
             >
               التصميم
             </button>
+
             <button
               class="portfolio-filter px-8 py-3 rounded-xl bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700"
               data-filter="ecommerce"
-              aria-pressed="false"
               type="button"
+              data-i18n="filterEcommerce"
             >
               التجارة الإلكترونية
             </button>
@@ -1088,7 +1164,7 @@
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             id="portfolio-grid"
           >
-            <!-- ecommerce  project1 -->
+            <!-- ecommerce project1 -->
             <div
               class="portfolio-item group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 hover:border-secondary transition-all duration-300"
               data-category="ecommerce"
@@ -1105,8 +1181,11 @@
                 <div class="flex items-center justify-between mb-3">
                   <span
                     class="px-4 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium"
-                    >تطبيق</span
+                    data-i18n="projectTypeApp"
                   >
+                    تطبيق
+                  </span>
+
                   <div class="flex space-x-2">
                     <a
                       href="https://ecommerce-freshcart-five.vercel.app/"
@@ -1114,6 +1193,7 @@
                     >
                       <i class="fa-solid fa-eye"></i>
                     </a>
+
                     <a
                       href="https://github.com/loai-osama-aka/ecommerce-Freshcart"
                       target="_blank"
@@ -1124,8 +1204,14 @@
                   </div>
                 </div>
 
-                <h3 class="text-2xl font-bold mb-2">Ecommerce Website</h3>
-                <p class="text-slate-500 dark:text-slate-400 mb-4">
+                <h3 class="text-2xl font-bold mb-2" data-i18n="project1Title">
+                  Ecommerce Website
+                </h3>
+
+                <p
+                  class="text-slate-500 dark:text-slate-400 mb-4"
+                  data-i18n="project1Desc"
+                >
                   موقع تجارة إلكترونية يتيح تصفح المنتجات والشراء والدفع.
                 </p>
 
@@ -1159,8 +1245,11 @@
                 <div class="flex items-center justify-between mb-3">
                   <span
                     class="px-4 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium"
-                    >موقع ويب</span
+                    data-i18n="projectTypeWeb"
                   >
+                    موقع ويب
+                  </span>
+
                   <div class="flex space-x-2">
                     <a
                       href="https://lens-aka-3adasa.vercel.app/"
@@ -1168,6 +1257,7 @@
                     >
                       <i class="fa-solid fa-eye"></i>
                     </a>
+
                     <a
                       href="https://github.com/loai-osama-aka/lens-aka-3adasa"
                       target="_blank"
@@ -1178,8 +1268,14 @@
                   </div>
                 </div>
 
-                <h3 class="text-2xl font-bold mb-2">Lens Website</h3>
-                <p class="text-slate-500 dark:text-slate-400 mb-4">
+                <h3 class="text-2xl font-bold mb-2" data-i18n="project2Title">
+                  Lens Website
+                </h3>
+
+                <p
+                  class="text-slate-500 dark:text-slate-400 mb-4"
+                  data-i18n="project2Desc"
+                >
                   موقع عرض احترافي للتصوير والعدسات بتصميم عصري ومتجاوب.
                 </p>
 
@@ -1191,7 +1287,7 @@
                     >Tailwind</span
                   >
                   <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-xs"
-                    >Api integration</span
+                    >API integration</span
                   >
                 </div>
               </div>
@@ -1213,8 +1309,11 @@
                 <div class="flex items-center justify-between mb-3">
                   <span
                     class="px-4 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium"
-                    >تطبيق</span
+                    data-i18n="projectTypeApp"
                   >
+                    تطبيق
+                  </span>
+
                   <div class="flex space-x-2">
                     <a
                       href="#"
@@ -1222,6 +1321,7 @@
                     >
                       <i class="fa-solid fa-eye"></i>
                     </a>
+
                     <a
                       href="https://github.com/loai-osama-aka/social-media-app"
                       target="_blank"
@@ -1232,8 +1332,14 @@
                   </div>
                 </div>
 
-                <h3 class="text-2xl font-bold mb-2">Social Media App</h3>
-                <p class="text-slate-500 dark:text-slate-400 mb-4">
+                <h3 class="text-2xl font-bold mb-2" data-i18n="project3Title">
+                  Social Media App
+                </h3>
+
+                <p
+                  class="text-slate-500 dark:text-slate-400 mb-4"
+                  data-i18n="project3Desc"
+                >
                   تطبيق تواصل اجتماعي يتيح إنشاء المنشورات والتفاعل مع
                   المستخدمين.
                 </p>
@@ -1251,7 +1357,7 @@
                 </div>
               </div>
             </div>
-            <!--Contact hub -->
+            <!-- Contact hub -->
             <div
               class="portfolio-item group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 hover:border-accent transition-all duration-300"
               data-category="app"
@@ -1268,8 +1374,11 @@
                 <div class="flex items-center justify-between mb-3">
                   <span
                     class="px-4 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium"
-                    >تطبيق</span
+                    data-i18n="projectTypeApp"
                   >
+                    تطبيق
+                  </span>
+
                   <div class="flex space-x-2">
                     <a
                       href="https://loai-osama-aka.github.io/contactHub/"
@@ -1277,6 +1386,7 @@
                     >
                       <i class="fa-solid fa-eye"></i>
                     </a>
+
                     <a
                       href="https://github.com/loai-osama-aka/contactHub"
                       target="_blank"
@@ -1287,8 +1397,14 @@
                   </div>
                 </div>
 
-                <h3 class="text-2xl font-bold mb-2">Contact Hub</h3>
-                <p class="text-slate-500 dark:text-slate-400 mb-4">
+                <h3 class="text-2xl font-bold mb-2" data-i18n="project4Title">
+                  Contact Hub
+                </h3>
+
+                <p
+                  class="text-slate-500 dark:text-slate-400 mb-4"
+                  data-i18n="project4Desc"
+                >
                   نظام إدارة جهات الاتصال مع CRUD UI بسيط وسريع.
                 </p>
 
@@ -1305,7 +1421,7 @@
                 </div>
               </div>
             </div>
-            <!-- spacecraft dashboard  -->
+            <!-- weather dashboard  -->
             <div
               class="portfolio-item group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 hover:border-secondary transition-all duration-300"
               data-category="app"
@@ -1316,18 +1432,23 @@
                   loading="lazy"
                   decoding="async"
                   src="./assets/imgs/weather.png"
-                  alt="weather app  modern UI, real-time data, responsive design"
+                  alt="weather app modern UI, real-time data, responsive design"
                 />
+
                 <div
                   class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 ></div>
               </div>
+
               <div class="p-6">
                 <div class="flex items-center justify-between mb-3">
                   <span
                     class="px-4 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium"
-                    >تطبيق</span
+                    data-i18n="projectTypeApp"
                   >
+                    تطبيق
+                  </span>
+
                   <div class="flex space-x-2">
                     <a
                       href="https://loai-osama-aka.github.io/weather-forecast/"
@@ -1336,9 +1457,9 @@
                     >
                       <i
                         class="fa-solid fa-eye text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
-                        aria-hidden="true"
                       ></i>
                     </a>
+
                     <a
                       href="https://github.com/loai-osama-aka/weather-forecast/"
                       class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors duration-300 group"
@@ -1346,16 +1467,23 @@
                     >
                       <i
                         class="fa-brands fa-github text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
-                        aria-hidden="true"
                       ></i>
                     </a>
                   </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">تطبيق الطقس</h3>
-                <p class="text-slate-500 dark:text-slate-400 mb-4">
+
+                <h3 class="text-2xl font-bold mb-2" data-i18n="project5Title">
+                  تطبيق الطقس
+                </h3>
+
+                <p
+                  class="text-slate-500 dark:text-slate-400 mb-4"
+                  data-i18n="project5Desc"
+                >
                   تطبيق طقس حديث يعرض بيانات الطقس في الوقت الحقيقي بتصميم
                   متجاوب.
                 </p>
+
                 <div class="flex flex-wrap gap-2">
                   <span
                     class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
@@ -1387,18 +1515,23 @@
                   loading="lazy"
                   decoding="async"
                   src="./assets/imgs/dinner.png"
-                  alt="what's for dinner app recipe suggestions, meal planning, user-friendly interface"
+                  alt="what's for dinner app recipe suggestions, meal planning"
                 />
+
                 <div
                   class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 ></div>
               </div>
+
               <div class="p-6">
                 <div class="flex items-center justify-between mb-3">
                   <span
                     class="px-4 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium"
-                    >تطبيقات</span
+                    data-i18n="projectTypeApp"
                   >
+                    تطبيقات
+                  </span>
+
                   <div class="flex space-x-2">
                     <a
                       href="https://loai-osama-aka.github.io/what-s-for-dinner"
@@ -1407,9 +1540,9 @@
                     >
                       <i
                         class="fa-solid fa-eye text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
-                        aria-hidden="true"
                       ></i>
                     </a>
+
                     <a
                       href="https://github.com/loai-osama-aka/what-s-for-dinner"
                       class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-accent transition-colors duration-300 group"
@@ -1417,16 +1550,23 @@
                     >
                       <i
                         class="fa-brands fa-github text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
-                        aria-hidden="true"
                       ></i>
                     </a>
                   </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">ما هو للغداء؟</h3>
-                <p class="text-slate-500 dark:text-slate-400 mb-4">
+
+                <h3 class="text-2xl font-bold mb-2" data-i18n="project6Title">
+                  ما هو للغداء؟
+                </h3>
+
+                <p
+                  class="text-slate-500 dark:text-slate-400 mb-4"
+                  data-i18n="project6Desc"
+                >
                   تطبيق يقترح وصفات طعام ويُساعد في التخطيط للوجبات مع واجهة
                   سهلة الاستخدام
                 </p>
+
                 <div class="flex flex-wrap gap-2">
                   <span
                     class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
@@ -1448,6 +1588,7 @@
           <div class="text-center mt-16">
             <a
               href="#contact"
+              data-i18n="startYourProject"
               class="inline-block bg-linear-to-r from-primary to-secondary px-12 py-4 rounded-xl text-lg font-bold text-white hover:-translate-y-1 transition-all duration-300"
             >
               <i class="fa-solid fa-rocket me-2"></i>
@@ -1467,16 +1608,23 @@
         ></div>
         <div class="container mx-auto max-w-7xl relative z-10">
           <div class="text-center mb-16">
-            <span class="text-secondary text-lg font-medium mb-3 block"
-              >مسيرتي المهنية</span
+            <span
+              class="text-secondary text-lg font-medium mb-3 block"
+              data-i18n="expLabel"
             >
-            <h2 id="experience-title" class="text-5xl font-black mb-4">
+              مسيرتي المهنية
+            </span>
+
+            <h2 class="text-5xl font-black mb-4" data-i18n="expTitle">
               الخبرة
               <span
                 class="bg-linear-to-r from-secondary to-accent bg-clip-text text-transparent"
-                >العملية</span
+                data-i18n="expSpan"
               >
+                العملية
+              </span>
             </h2>
+
             <div
               class="w-24 h-1.5 bg-linear-to-r from-secondary to-accent mx-auto rounded-full"
             ></div>
@@ -1497,14 +1645,19 @@
                     <div class="flex items-center justify-between mb-4">
                       <span
                         class="px-4 py-2 bg-primary/20 text-primary rounded-lg text-sm font-bold"
+                        data-i18n="exp1Date"
                       >
                         2025 - الآن
                       </span>
                       <i class="fa-solid fa-code text-3xl text-primary"></i>
                     </div>
-
-                    <h3 class="text-2xl font-bold mb-2">Frontend Developer</h3>
-                    <p class="text-xl text-secondary mb-3">
+                    <h3 class="text-2xl font-bold mb-2" data-i18n="exp1Title">
+                      Frontend Developer
+                    </h3>
+                    <p
+                      class="text-xl text-secondary mb-3"
+                      data-i18n="exp1Company"
+                    >
                       Freelance / Personal Projects
                     </p>
 
@@ -1559,13 +1712,22 @@
                       ></i>
                       <span
                         class="px-4 py-2 bg-secondary/20 text-secondary rounded-lg text-sm font-bold"
+                        data-i18n="exp2Date"
                       >
                         2023 - 2024
                       </span>
                     </div>
 
-                    <h3 class="text-2xl font-bold mb-2">Frontend Training</h3>
-                    <p class="text-xl text-secondary mb-3">Route Academy</p>
+                    <h3 class="text-2xl font-bold mb-2" data-i18n="exp2Title">
+                      Frontend Training
+                    </h3>
+
+                    <p
+                      class="text-xl text-secondary mb-3"
+                      data-i18n="exp2Company"
+                    >
+                      Route Academy
+                    </p>
 
                     <p class="text-slate-600 dark:text-slate-400 mb-4">
                       دراسة أساسيات البرمجة وتطوير الويب وبناء مشاريع باستخدام
@@ -1590,6 +1752,10 @@
                         class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-xs"
                         >React</span
                       >
+                      <span
+                        class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-xs"
+                        >Next.js</span
+                      >
                     </div>
                   </div>
                 </div>
@@ -1604,18 +1770,21 @@
                     <div class="flex items-center justify-between mb-4">
                       <span
                         class="px-4 py-2 bg-accent/20 text-accent rounded-lg text-sm font-bold"
+                        data-i18n="exp3Date"
                       >
                         2020 - 2024
                       </span>
+
                       <i
                         class="fa-solid fa-graduation-cap text-3xl text-accent"
                       ></i>
                     </div>
 
-                    <h3 class="text-2xl font-bold mb-2">
+                    <h3 class="text-2xl font-bold mb-2" data-i18n="exp3Title">
                       Bachelor of Artificial Intelligence
                     </h3>
-                    <p class="text-xl text-accent mb-3">
+
+                    <p class="text-xl text-accent mb-3" data-i18n="exp3Company">
                       Kafrelsheikh University
                     </p>
 
@@ -1660,8 +1829,9 @@
                 <i class="fa-solid fa-code text-3xl text-white"></i>
               </div>
 
-              <h3 class="text-2xl font-bold mb-2">المهارات التقنية</h3>
-
+              <h3 class="text-2xl font-bold mb-2" data-i18n="skillsCardTitle">
+                المهارات التقنية
+              </h3>
               <p class="text-slate-500 dark:text-slate-400">
                 React • Next.js • JavaScript • Tailwind<br />
                 APIs • Redux • React Query • Git
@@ -1678,8 +1848,9 @@
                 <i class="fa-solid fa-diagram-project text-3xl text-white"></i>
               </div>
 
-              <h3 class="text-2xl font-bold mb-2">المشاريع</h3>
-
+              <h3 class="text-2xl font-bold mb-2" data-i18n="projectsCardTitle">
+                المشاريع
+              </h3>
               <p class="text-slate-500 dark:text-slate-400">
                 E-commerce Platform<br />
                 Social Media App<br />
@@ -1697,8 +1868,9 @@
               >
                 <i class="fa-solid fa-rocket text-3xl text-white"></i>
               </div>
-
-              <h3 class="text-2xl font-bold mb-2">هدفي</h3>
+              <h3 class="text-2xl font-bold mb-2" data-i18n="goalTitle">
+                هدفي
+              </h3>
 
               <p class="text-slate-500 dark:text-slate-400">
                 أسعى للانضمام لفريق تطوير احترافي<br />
@@ -1720,15 +1892,19 @@
         ></div>
         <div class="container mx-auto max-w-7xl relative z-10">
           <div class="text-center mb-16">
-            <span class="text-accent text-lg font-medium mb-3 block"
+            <span
+              data-i18n="myrealexp"
+              class="text-accent text-lg font-medium mb-3 block"
               >خبرتي العملية</span
             >
             <h2 id="testimonials-title" class="text-5xl font-black mb-4">
-              تأثير
+              <span data-i18n="testimonialsWord">تأثير</span>
               <span
                 class="bg-linear-to-r from-accent to-primary bg-clip-text text-transparent"
-                >المشاريع</span
+                data-i18n="testimonialsSpan"
               >
+                المشاريع
+              </span>
             </h2>
             <div
               class="w-24 h-1.5 bg-linear-to-r from-accent to-primary mx-auto rounded-full"
@@ -1999,22 +2175,31 @@
             <div
               class="bg-white dark:bg-slate-900 rounded-3xl p-12 text-center"
             >
-              <h3 class="text-3xl font-bold mb-4">جاهز تبدأ مشروعك؟</h3>
+              <h3 class="text-3xl font-bold mb-4" data-i18n="ctaTitle">
+                جاهز تبدأ مشروعك؟
+              </h3>
+
               <p
                 class="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto"
+                data-i18n="ctaDesc"
               >
                 يلا نشتغل سوا عشان نحول أفكارك لواقع مبهر
               </p>
+
               <div class="flex justify-center gap-4 flex-wrap">
                 <a
                   href="#contact"
                   class="bg-linear-to-r from-primary to-secondary text-white px-10 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
+                  data-i18n="ctaBtnContact"
                 >
                   تواصل معي الآن
                 </a>
+
                 <a
-                  href="#portfolio"
+                  href="https://github.com/loai-osama-aka"
+                  target="_blank"
                   class="border-2 border-primary dark:border-white text-primary dark:text-white px-10 py-4 rounded-xl font-bold hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all duration-300"
+                  data-i18n="ctaBtnWork"
                 >
                   شاهد المزيد من الأعمال
                 </a>
@@ -2488,16 +2673,17 @@
                 </div>
                 <div
                   class="text-2xl font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent"
+                  data-i18n="footerName"
                 >
                   لؤي اسامة
                 </div>
               </div>
               <p
                 class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed mb-8"
+                data-i18n="footerDesc"
               >
                 أؤمن بأن البرمجة فن. هدفي مش بس كتابة كود، بل خلق تجربة مستخدم
-                سلسة بتسيب أثر. بدمج التصميم الجمالي مع الأداء القوي عشان أقدم
-                منتج نهائي متكامل.
+                سلسة بتسيب أثر.
               </p>
 
               <!-- Unique Actions -->
@@ -2516,12 +2702,17 @@
                   <div class="text-right">
                     <span
                       class="block text-xs text-slate-500 dark:text-slate-400 mb-1"
-                      >تعرف على خبراتي</span
+                      data-i18n="footerCVLabel"
                     >
+                      تعرف على خبراتي
+                    </span>
+
                     <span
                       class="block font-bold text-slate-800 dark:text-white text-lg"
-                      >حمل السيرة الذاتية (CV)</span
+                      data-i18n="footerCVText"
                     >
+                      حمل السيرة الذاتية (CV)
+                    </span>
                   </div>
                   <i
                     class="fa-solid fa-arrow-left mr-auto text-slate-300 group-hover:text-primary transition-colors"
@@ -2538,23 +2729,29 @@
                       class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"
                     ></span>
                   </span>
+
                   <p class="text-sm text-slate-500 dark:text-slate-400">
-                    أعمل حالياً على:
+                    <span data-i18n="footerStatusText"> أعمل حالياً على:</span>
                     <span
                       class="font-bold text-slate-700 dark:text-white border-b-2 border-emerald-500/30"
-                      >مشروع SaaS لإدارة الفريق</span
+                      data-i18n="footerStatusProject"
                     >
+                      مشروع SaaS لإدارة الفريق
+                    </span>
                   </p>
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
+              <h3 class="text-xl font-bold mb-6" data-i18n="footerLinksTitle">
+                روابط سريعة
+              </h3>
               <ul class="space-y-3">
                 <li>
                   <a
                     href="#hero-section"
+                    data-i18n="home"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
                     >الرئيسية</a
                   >
@@ -2562,6 +2759,7 @@
                 <li>
                   <a
                     href="#about"
+                    data-i18n="about"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
                     >عني</a
                   >
@@ -2569,6 +2767,7 @@
                 <li>
                   <a
                     href="#portfolio"
+                    data-i18n="portfolio"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
                     >الأعمال</a
                   >
@@ -2576,6 +2775,7 @@
                 <li>
                   <a
                     href="#experience"
+                    data-i18n="experience"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
                     >الخبرة</a
                   >
@@ -2583,6 +2783,7 @@
                 <li>
                   <a
                     href="#testimonials"
+                    data-i18n="testimonials"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
                     >التوصيات</a
                   >
@@ -2590,6 +2791,7 @@
                 <li>
                   <a
                     href="#contact"
+                    data-i18n="contact"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
                     >تواصل</a
                   >
@@ -2598,11 +2800,17 @@
             </div>
 
             <div>
-              <h3 class="text-xl font-bold mb-6">الخدمات</h3>
+              <h3
+                class="text-xl font-bold mb-6"
+                data-i18n="footerServicesTitle"
+              >
+                الخدمات
+              </h3>
               <ul class="space-y-3">
                 <li>
                   <a
                     href="#"
+                    data-i18n="service1"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
                     >تطوير الويب</a
                   >
@@ -2610,6 +2818,7 @@
                 <li>
                   <a
                     href="#"
+                    data-i18n="service2"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
                     >تطوير التطبيقات</a
                   >
@@ -2617,6 +2826,7 @@
                 <li>
                   <a
                     href="#"
+                    data-i18n="service3"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
                     >تصميم UI/UX</a
                   >
@@ -2624,6 +2834,7 @@
                 <li>
                   <a
                     href="#"
+                    data-i18n="service4"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
                     >الاستشارات التقنية</a
                   >
@@ -2631,6 +2842,7 @@
                 <li>
                   <a
                     href="#"
+                    data-i18n="service5"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
                     >تحسين الأداء</a
                   >
@@ -2638,6 +2850,7 @@
                 <li>
                   <a
                     href="#"
+                    data-i18n="service6"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
                     >الصيانة والدعم</a
                   >
@@ -2650,8 +2863,9 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
               <p
                 class="text-slate-500 dark:text-slate-400 text-lg mb-4 md:mb-0"
+                data-i18n="footerCopy"
               >
-                &copy; 2025 لؤي اسامة. جميع الحقوق محفوظة.
+                © 2025 لؤي اسامة. جميع الحقوق محفوظة.
               </p>
             </div>
           </div>
