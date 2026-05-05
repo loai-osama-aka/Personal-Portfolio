@@ -419,6 +419,9 @@ const translations = {
     service6: "الصيانة والدعم",
 
     footerCopy: "© 2025 لؤي اسامة. جميع الحقوق محفوظة.",
+    projectWeatherTitle: "تطبيق توقعات الطقس",
+    projectWeatherDesc:
+      "تطبيق طقس متطور يعرض بيانات الطقس في الوقت الحقيقي باستخدام API، مع تحسين الأداء عبر استخدام sprite للصور وإدارة الحالة باستخدام Jotai.",
   },
 
   en: {
@@ -569,6 +572,9 @@ const translations = {
     service6: "Maintenance & Support",
 
     footerCopy: "© 2025 Loai Osama. All rights reserved.",
+    projectWeatherTitle: "Weather Forecast App",
+    projectWeatherDesc:
+      "Advanced weather app displaying real-time data using APIs, optimized with sprite-based icons and state management using Jotai.",
   },
 };
 let currentLang = localStorage.getItem("lang") || "ar";
