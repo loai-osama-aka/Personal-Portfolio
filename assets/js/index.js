@@ -435,7 +435,7 @@ const translations = {
     changeyourideas: "Transforming your ideas into",
     specialideas: "unique digital experiences",
     description:
-      ". Specializing in building modern websites and web applications with the latest technologies",
+      "Specializing in building modern websites and web applications with the latest technologies.",
     exploreWork: "Explore My Work",
     contactMe: "Contact Me",
     discoverMore: "Discover More",
