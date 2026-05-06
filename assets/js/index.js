@@ -300,6 +300,12 @@ const translations = {
       text: `بحب أحول الأفكار <span class="text-primary">لواقع رقمي</span>`,
       html: true,
     },
+    arrowRight: {
+      text: ` <i
+                    class="fa-solid fa-arrow-left relative z-10 transition-transform duration-300 group-hover:-translate-x-2"
+                  ></i>`,
+      html: true,
+    },
 
     aboutDesc1:
       "مطور واجهات أمامية لدي الخبرة في بناء تطبيقات ويب حديثة وتصميم تجارب مستخدم استثنائية.",
@@ -448,7 +454,12 @@ const translations = {
     aboutLabel: "About Me",
     aboutTitle: "About",
     name: "Loai Osama",
-
+    arrowRight: {
+      text: ` <i
+                    class="fa-solid fa-arrow-right relative z-10 transition-transform duration-300 group-hover:-translate-x-2"
+                  ></i>`,
+      html: true,
+    },
     aboutHeading: {
       text: `I love turning ideas <span class="text-primary">into digital reality</span>`,
       html: true,
