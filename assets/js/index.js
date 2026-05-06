@@ -422,6 +422,9 @@ const translations = {
     projectWeatherTitle: "تطبيق توقعات الطقس",
     projectWeatherDesc:
       "تطبيق طقس متطور يعرض بيانات الطقس في الوقت الحقيقي باستخدام API، مع تحسين الأداء عبر استخدام sprite للصور وإدارة الحالة باستخدام Jotai.",
+    projectSpaceTitle: "لوحة تحكم الفضاء",
+    projectSpaceDesc:
+      "لوحة تحكم تفاعلية تعرض بيانات الفضاء والكواكب باستخدام REST API، مع تصميم حديث وتجربة مستخدم سلسة.",
   },
 
   en: {
@@ -575,6 +578,9 @@ const translations = {
     projectWeatherTitle: "Weather Forecast App",
     projectWeatherDesc:
       "Advanced weather app displaying real-time data using APIs, optimized with sprite-based icons and state management using Jotai.",
+    projectSpaceTitle: "Space Dashboard",
+    projectSpaceDesc:
+      "Interactive dashboard displaying space and planets data using REST APIs, featuring a modern UI and smooth user experience.",
   },
 };
 let currentLang = localStorage.getItem("lang") || "ar";
